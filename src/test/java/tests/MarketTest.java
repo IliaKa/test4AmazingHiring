@@ -33,6 +33,6 @@ public class MarketTest extends AbstractBrowserTest {
         result.add("Lenovo " + mp.getNumbersOf("Lenovo"));
         result.add("Xiaomi " + mp.getNumbersOf("Xiaomi"));
 
-        mp.printInfoAboutAllModels(result);
+        result.forEach(System.out::println);
     }
 }

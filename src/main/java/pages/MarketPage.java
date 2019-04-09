@@ -13,8 +13,8 @@ public class MarketPage {
 
 
     public String filterByCpu(String cpu) {
-                $x(String.format(stuffName, cpu.toLowerCase())).click();
-                return getNameOfItem(cpu);
+        $x(String.format(stuffName, cpu.toLowerCase())).click();
+        return getNameOfItem(cpu);
     }
 
     private MarketPage filterByModel(String model) {
@@ -40,13 +40,9 @@ public class MarketPage {
 
     public String getNumbersOf(String model) {
 
-        String res =  filterByModel(model)
+        String res = filterByModel(model)
                 .getNumberOfItemsAfterFiltration();
-                clearField(model);
+        clearField(model);
         return res;
     }
-
-    public void printInfoAboutAllModels(ArrayList<String> result) {
-        result.forEach(System.out::println);
-        }
 }
